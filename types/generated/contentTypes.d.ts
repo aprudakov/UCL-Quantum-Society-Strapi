@@ -515,11 +515,11 @@ export interface ApiResourceResource extends Struct.CollectionTypeSchema {
     media: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    resource_type: Schema.Attribute.Relation<
+    tags: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'>;
+    type: Schema.Attribute.Relation<
       'oneToOne',
       'api::resource-type.resource-type'
     >;
-    tags: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

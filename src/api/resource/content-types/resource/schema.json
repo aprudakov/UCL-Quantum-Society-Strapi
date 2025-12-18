@@ -35,7 +35,7 @@
         "audios"
       ]
     },
-    "resource_type": {
+    "type": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::resource-type.resource-type"
